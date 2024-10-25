@@ -1,10 +1,17 @@
 # ElecBro(edited by jacksmith)
+<!--
 <p align="center">
   <br>
  	<img src="https://github.com/YUNSUNGWOONG/ElecBro/assets/100409315/04f77169-8e76-4ac6-84ed-26a2c2aaf04b" alt="elebro_logo" style="zoom:50%;" />
   <br>
 </p>
-![image](https://github.com/user-attachments/assets/67315750-e5d9-4546-bf5f-3e2b63acf252)
+-->
+<p align="center">
+  <br>
+ 	<img src="https://github.com/user-attachments/assets/67315750-e5d9-4546-bf5f-3e2b63acf252" alt="elebro_logo" style="zoom:50%;" />
+  <br>
+</p>
+
 
 
 2024임베디드SW경진대회(webOS부문) - ELECBRO팀
