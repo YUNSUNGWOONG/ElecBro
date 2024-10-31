@@ -1,11 +1,4 @@
-# ElecBro(edited by jacksmith)
-<!--
-<p align="center">
-  <br>
- 	<img src="https://github.com/YUNSUNGWOONG/ElecBro/assets/100409315/04f77169-8e76-4ac6-84ed-26a2c2aaf04b" alt="elebro_logo" style="zoom:50%;" />
-  <br>
-</p>
--->
+# AGRIBOT(어그리봇)
 <p align="center">
   <br>
  	<img src="https://github.com/user-attachments/assets/67315750-e5d9-4546-bf5f-3e2b63acf252" alt="elebro_logo" style="zoom:50%;" />
@@ -13,20 +6,19 @@
 </p>
 
 
-
-2024임베디드SW경진대회(webOS부문) - ELECBRO팀
-
+### 2024임베디드SW경진대회(webOS부문) - ELECBRO팀
 
 
-## Getting Started
+
+## 1. Getting Started(시작방법)
 
 These instructions will give you a copy of the project up and running on
 your local machine for development and testing purposes. See deployment
 for notes on deploying the project on a live system.
 
-### Prerequisites
+## 2. Prerequisites(요구사항)
 
-Requirements for the software and other tools to build, test and push 
+아래와 같은 소프트웨어 개발환경을 필요로 합니다.
 - [VScode](https://www.example.com)
 - [Example 2](https://www.example.com)
 
@@ -41,7 +33,30 @@ Requirements for the software and other tools to build, test and push
 
 
 
-### Installing
+## 3. Installing
+
+### 3.1 webOS 세팅방법
+
+NodeJS 설치 후, 아래 절차를 따라줍니다.
+
+```javascript
+# 요구사항 패키지 설치
+npm install
+# node서버 실행
+npm run dev
+```
+
+
+
+### 3.2 HaviBOT 세팅방법
+
+- 터틀봇 패키지 설치
+
+
+
+- Havibot에 있는 
+
+### 3.3 HueBOT 세팅방법
 
 0. 패키지 설치전 필요한 것들을 다운받아줍니다.
    ```bash
@@ -122,15 +137,6 @@ Requirements for the software and other tools to build, test and push
    
 
 
-
-
-
-## Built With
-
-  - [Contributor Covenant](https://www.contributor-covenant.org/) - Used
-    for the Code of Conduct
-  - [Creative Commons](https://creativecommons.org/) - Used to choose
-    the license
 
 ## Contributing
 

@@ -7,7 +7,6 @@ from utils.general import non_max_suppression, scale_boxes
 from utils.plots import Annotator, colors
 from utils.torch_utils import select_device
 import time
-import requests
 
 """
 서브함수를 따로 빼서 추출한 라벨을 소켓통신하는 코드
@@ -17,7 +16,6 @@ app = Flask(__name__)
 socketio = SocketIO(app)
 
 label = None  # 전역 변수 선언
-
 
 @app.route('/')
 def Stream():
@@ -69,37 +67,12 @@ def GenerateFrames():
             yield(b'--frame\r\n'
                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-crops = {
-    "red": 0,
-    "green": 0,
-    "decay": 0
-}
-url = "http://your-server-url.com/endpoint" #현근이 주소
 def send_real_label_data():
     global label
     while True:
         if label:
             print(f"Current label: {label}")  # label 값 출력
             socketio.emit('label', {'label': label})
-            if label == 'red':
-                crops["red"] += 1
-            elif label == 'green':
-                crops["green"] += 1
-            elif label == 'decay':
-                crops["decay"] += 1
-
-            # 소켓방식으로 서버에 데이터전속    
-            #socketio.emit('crops', {'crops':crops})
-
-            # POST 방식으로 서버에 데이터 전송
-            response = requests.post(url, json={'crops': crops})
-            
-            # 응답 확인
-            if response.status_code == 200:
-                print("Data sent successfully!")
-            else:
-                print(f"Failed to send data. Status code: {response.status_code}")
-
             time.sleep(5)
         else:
             time.sleep(0.1)  # 1초마다 확인 및 전송
