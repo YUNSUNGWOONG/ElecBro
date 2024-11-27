@@ -6,8 +6,8 @@ Servo myservo;
 
 // 구역별 회전에 필요한 시간(1546ms는 360도 회전)
 const int R_Degrees = 258; // 120도 도달 시간
-const int G_Degrees = 586;//716; // 240도 도달 시간
-const int D_Degrees = 914; // 360도 도달 시간
+const int G_Degrees = 578;//716; // 240도 도달 시간
+const int D_Degrees = 898; // 360도 도달 시간
 const int reset_Degrees = 920; // 360도 도달 시간
 
 int currentTime = 258; // 현재 위치를 기준으로 걸린 시간을 저장(0부터 시작)
@@ -31,7 +31,7 @@ bool beltActive = true;  // 벨트 활성화 상태 관리
 void setup() {
   Serial.begin(9600);
   myservo.attach(9);  
-  myservo.write(91);  // 서보 모터 중립 위치 설정
+  myservo.write(93);  // 서보 모터 중립 위치 설정
 
   pinMode(enablePin, OUTPUT);
   pinMode(enablePin2, OUTPUT);
@@ -66,9 +66,9 @@ int getRotationTime(int targetTime) {
   }
   
 
-  if (rotationTime > 650) {
+  if (rotationTime > 639) {
     Serial.println("additive rotationTime");
-    rotationTime -= 49; // 시계방향으로만 이동하도록 360도 더함
+    rotationTime -= 43; // 시계방향으로만 이동하도록 360도 더함
   }
 
   Serial.print("Rotaion Time(after): ");
