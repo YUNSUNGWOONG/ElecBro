@@ -31,7 +31,7 @@ bool beltActive = true;  // 벨트 활성화 상태 관리
 void setup() {
   Serial.begin(9600);
   myservo.attach(9);  
-  myservo.write(93);  // 서보 모터 중립 위치 설정
+  myservo.write(91);  // 서보 모터 중립 위치 설정
 
   pinMode(enablePin, OUTPUT);
   pinMode(enablePin2, OUTPUT);
